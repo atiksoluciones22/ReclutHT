@@ -1,0 +1,300 @@
+.progressx {
+    cursor: default;
+    speak: none;
+    margin: 50px 0;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.progressx:after {
+    clear: both;
+    display: table;
+    content: "";
+}
+
+.progress__step {
+    width: calc((100% - 66%) / (4 - 1));
+    position: relative;
+    float: left;
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: var(--primary-color, #1967D2);
+    color: #fff;
+    transform: skew(-20deg);
+}
+
+.progress__step:not(:last-child) {
+    margin-right: 5px;
+}
+
+.progress--five .progress__step {
+    width: calc((100% - 66%) / (5 - 1));
+}
+
+.progress--three .progress__step {
+    width: calc((100% - 66%) / (3 - 1));
+}
+
+.progress__step--active {
+    width: calc(66% - (5px * (4 - 1)));
+    background-color: var(--primary-color, #1967D2);
+    color: #fff;
+    transition: background-color 250ms ease-out, width 250ms ease-out;
+}
+
+.progress--five .progress__step--active {
+    width: calc(66% - (5px * (5 - 1)));
+}
+
+.progress--three .progress__step--active {
+    width: calc(66% - (5px * (3 - 1)));
+}
+
+.progress__step--active~.progress__step {
+    background-color: #DADADA;
+    color: #555;
+}
+
+@media screen and (min-width: 760px) {
+    .progress__step {
+        width: calc((100% / 4) - (10px * ((4 - 1) / 4)));
+        border-radius: 0;
+        overflow: visible;
+        transition: width 0s ease-out;
+        background-color: #DADADA;
+        color: #555;
+    }
+
+    .progress--five .progress__step {
+        width: calc((100% / 5) - (10px * ((5 - 1) / 5)));
+    }
+
+    .progress--three .progress__step {
+        width: calc((100% / 3) - (10px * ((3 - 1) / 3)));
+    }
+
+    .progress__step::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        border-top: 20pxsolid transparent;
+        border-bottom: 20pxsolid transparent;
+        border-left: 20pxsolid #fff;
+        left: 0;
+    }
+
+    .progress__step::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        border-top: 20pxsolid transparent;
+        border-bottom: 20pxsolid transparent;
+        border-left: 20pxsolid #DADADA;
+        left: 99.9%;
+        /* Not 100% because of IE subpixel rendering bug */
+        z-index: 2;
+    }
+
+    .progress__step:first-child {
+        border-radius: 4px 0 0 4px;
+    }
+
+    .progress__step:first-child::before {
+        display: none;
+    }
+
+    .progress__step:last-child {
+        border-radius: 0 4px 4px 0;
+    }
+
+    .progress__step:last-child::after {
+        display: none;
+    }
+
+    .progress__step:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    .progress__step:not(:last-child) {
+        margin-right: 10px;
+    }
+
+    .progress__step--active {
+        background-color: var(--primary-color, #1967D2);
+        color: #fff;
+    }
+
+    .progress__step--active::after {
+        border-left-color: var(--primary-color, #1967D2);
+    }
+}
+
+.progress__label {
+    height: 40px;
+    transform-style: preserve-3d;
+    transform: skew(20deg);
+}
+
+.progress__step--active .progress__label {
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 760px) {
+    .progress__label {
+        margin-right: 10px;
+    }
+}
+
+.progress__badge {
+    text-align: center;
+    font-weight: 700;
+}
+
+.progress__badge::after {
+    content: "\2714";
+    font-size: 1.28571em;
+}
+
+.progress__step--active .progress__badge::after,
+.progress__step--active~.progress__step .progress__badge::after {
+    display: none;
+}
+
+.progress__step:not(.progress__step--active) .progress__badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 760px) {
+    .progress__step:not(.progress__step--active) .progress__badge {
+        position: absolute;
+        border: 2px solid #555;
+        border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 10px;
+        line-height: 24px;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.progress__step--active .progress__badge {
+    position: absolute;
+    border: 2px solid #555;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    line-height: 24px;
+    border-color: #fff;
+}
+
+.progress__number {
+    display: none;
+    font-size: 1.14286em;
+}
+
+.progress__step--active .progress__number,
+.progress__step--active~.progress__step .progress__number {
+    display: inline;
+}
+
+.progress__title {
+    position: absolute;
+    left: 46px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1em;
+    font-weight: 500;
+    z-index: 3;
+}
+
+.progress__step:not(.progress__step--active) .progress__title {
+    display: none;
+}
+
+@media screen and (min-width: 760px) {
+    .progress__step:not(.progress__step--active) .progress__title {
+        display: inline-block;
+    }
+}
+
+.recruitment-form .buttons {
+    border-top:1px solid #e7e7e7;
+    margin-top: 40px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.title-step {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.title-step span {
+    font-weight: 400;
+}
+
+select {
+    box-sizing: border-box;
+    background-image: url('../img/ChevronDown.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px;
+    appearance: none;
+    /* Remove default arrow */
+    -webkit-appearance: none;
+    /* Remove default arrow for Safari */
+    -moz-appearance: none;
+    /* Remove default arrow for Firefox */
+    -o-appearance: none;
+    /* Remove default arrow for Opera */
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-color, #1967D2);
+    margin-top: 5px;
+}
+
+.terms input {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+}
+
+.terms label{
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.step-number{
+    color: var(--primary-color, #1967D2);
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+}
+
+.step-number svg {
+    width: 22px;
+    cursor: pointer;
+    color: black;
+}

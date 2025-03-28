@@ -1,0 +1,25 @@
+.timer svg {
+    width: 35px;
+}
+
+.timer p .time {
+    font-weight: 600;
+}
+
+.timer p {
+    font-size: 21px;
+    text-transform: uppercase;
+}
+
+.timer {
+    background-color: var(--primary-color, #1967D2);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    padding: 10px 20px;
+}

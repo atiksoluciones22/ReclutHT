@@ -1,0 +1,75 @@
+.popup {
+    display: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0px;
+    z-index: 9;
+}
+
+.postulation-show .button-close {
+    position: relative;
+    background-color: transparent;
+    padding: 0px;
+    border: none;
+    margin-bottom: 20px;
+    top: -15px;
+    cursor: pointer;
+}
+
+.postulation-show .button-close svg {
+    width: 25px;
+}
+
+.postulation-show .button-link {
+    background-color: var(--primary-color, #1967D2);
+    width: 100%;
+    color: white;
+}
+
+.postulation-show .button-link:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+}
+
+.postulation-show {
+    position: relative;
+    max-width: 1050px;
+    width: 85%;
+    height: 100vh;
+    background-color: white;
+    margin-left: auto;
+    overflow: auto;
+    padding: 50px;
+}
+
+.postulation-show .title {
+    margin: 0px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+.informations {
+    margin-top: 25px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.informations .information span {
+    font-size: 15px;
+    font-weight: 600;
+    color: gray;
+}
+
+.informations .information p {
+    font-size: 14.5px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.informations .information {
+    margin-top: 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #e7e7e7;
+}

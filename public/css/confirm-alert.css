@@ -1,0 +1,84 @@
+.confirm-alert{
+    position: absolute;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 33, 33, 0.600);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.confirm-alert .file {
+    display: block;
+    color: #25AD60;
+    background-color: #e5e5e58d;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    border-left: 4px solid #25AD60;
+}
+
+.confirm-alert form .actions{
+    display: flex;
+    flex: grow;
+    background-color: transparent;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.confirm-alert form .actions button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 15px;
+}
+
+.confirm-alert form .actions .cancel {
+    background-color: #dadada;
+    color: black;
+}
+
+.confirm-alert form .actions .confirm {
+    background-color: var(--primary-color, #1967D2);
+}
+
+.confirm-alert form {
+    margin: auto;
+    max-width: 500px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 5px;
+    width: 90%;
+}
+
+.confirm-alert form .title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.confirm-alert form .content svg {
+    width: 100%;
+}
+
+.confirm-alert form .content .info{
+    color: darkorange;
+}
+
+.confirm-alert form .content {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    text-align: left;
+    gap: 15px;
+    font-size: 15px;
+    margin-bottom: 15px;
+}

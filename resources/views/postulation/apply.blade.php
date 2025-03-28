@@ -1,0 +1,22 @@
+@extends('layouts.app')
+
+@push('head')
+    <link rel="stylesheet" href="{{ asset('css/postulation-form.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/filepond/dist/filepond.min.css">
+@endpush
+
+@push('scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+    <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+    <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+@endpush
+
+@section('content')
+    <livewire:cover :title="$title" />
+
+    <div class="container">
+        <livewire:postulation-form />
+    </div>
+@endsection

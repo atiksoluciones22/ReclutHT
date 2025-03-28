@@ -1,0 +1,140 @@
+.title_panel {
+    font-weight: 500;
+    font-size: 23px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.nav {
+    margin-top: 50px;
+    overflow: auto;
+    background-color: rgb(242, 242, 242);
+    width: 100%;
+    padding: 0px 25px;
+    border-radius: 5px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr auto;
+}
+
+.nav ul:first-child {
+    width: 100%;
+    overflow: auto;
+}
+
+.nav ul {
+    display: flex;
+    padding: 0px;
+    gap: 20px;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li a {
+    font-size: 15px;
+}
+
+.data-table .list ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    gap: 6px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.data-table .list button svg {
+    width: 25px;
+}
+
+.data-table .list button {
+    list-style: none;
+    background-color: #444444ec;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: 0.3s;
+    border: none;
+}
+
+.data-table .list button:hover {
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.data-table .actions {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+}
+
+.data-table .actions button {
+    width: 100%;
+}
+
+.actions-flex {
+    display: flex  !important;
+    grid-template-columns: none;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.data-table {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 50px;
+    overflow: auto;
+    border: 1px solid #e5e9f2;
+}
+
+.data-table-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+}
+
+.data-table-body {
+    color: black;
+    border-top: none;
+    border-bottom: none;
+    background-color: white;
+}
+
+.data-table-body .data-table-row:hover>.data-table-cell {
+    background-color: #F4F6F9;
+    cursor: pointer;
+}
+
+.data-table-cell {
+    padding: 20px;
+    min-width: 250px;
+    background-color: var(--primary-color, #1967D2);
+    color: white;
+    border: none;
+}
+
+.data-table-body .data-table-cell {
+    border-bottom: 1px solid #e5e9f2;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.data-table-header .data-table-cell {
+    font-weight: 600;
+}
